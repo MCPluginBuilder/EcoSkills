@@ -20,7 +20,7 @@ An **effect** is a special ability granted to a player and levelled up through s
 
 ## Naming and IDs
 
-The file name without `.yml` is the effect's ID. That ID is what you use in commands, skill rewards, and placeholders. For item textures and icons, see the [Item Lookup System](https://plugins.auxilor.io/the-item-lookup-system).
+The file name without `.yml` is the effect's ID. That ID is what you use in commands, skill rewards, and placeholders. For item textures and icons, see the [Item Lookup System](https://hub.auxilor.io/wiki/eco/the-item-lookup-system-the-item-lookup-system).
 
 :::warning ID rules
 IDs may only contain lowercase letters, numbers, and underscores (a-z, 0-9, _). No spaces, capitals, or hyphens, or the effect will not load.
@@ -80,8 +80,8 @@ effects:
 :::danger Effects are their own system
 The effects, conditions, filters, and mutators here are the shared libreforge system, documented in full elsewhere. Read these before going deep:
 
-- [Configuring an Effect](https://plugins.auxilor.io/effects/configuring-an-effect)
-- [Configuring an Effect Chain](https://plugins.auxilor.io/effects/configuring-a-chain)
+- [Configuring an Effect](https://hub.auxilor.io/wiki/libreforge/configuring-an-effect)
+- [Configuring an Effect Chain](https://hub.auxilor.io/wiki/libreforge/configuring-a-chain)
 :::
 
 ### Conditions
@@ -113,4 +113,4 @@ conditions: [ ] # Empty means the ability always activates
 
 - **Default effects:** the shipped effect configs are [on GitHub](https://github.com/Auxilor/EcoSkills/tree/master/eco-core/core-plugin/src/main/resources/effects); community configs are on [lrcdb](https://lrcdb.auxilor.io/).
 - **Grant effects from skills:** hand effects out as level rewards in [How to make a Skill](how-to-make-a-skill).
-- **Configure effects:** the effects system is covered in [Configuring an Effect](https://plugins.auxilor.io/effects/configuring-an-effect).
+- **Configure effects:** the effects system is covered in [Configuring an Effect](https://hub.auxilor.io/wiki/libreforge/configuring-an-effect).

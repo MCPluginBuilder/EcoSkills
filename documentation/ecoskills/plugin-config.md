@@ -90,7 +90,7 @@ gui:
       row: 6
       column: 5
 
-  custom-slots: [ ] # Extra GUI slots; see https://plugins.auxilor.io/all-plugins/custom-gui-slots
+  custom-slots: [ ] # Extra GUI slots; see https://hub.auxilor.io/wiki/eco/pages
 
 stats-gui:
   rows: 6 # Rows in the /stats GUI
@@ -133,7 +133,7 @@ stats-gui:
       row: 6
       column: 5
 
-  custom-slots: [ ] # Extra GUI slots; see https://plugins.auxilor.io/all-plugins/custom-gui-slots
+  custom-slots: [ ] # Extra GUI slots; see https://hub.auxilor.io/wiki/eco/pages
 
 level-gui:
   title: "&7%skill% &8(%page%/%max_page%)" # GUI title; %skill% is the skill being viewed. Supports %page% and %max_page% placeholders
@@ -215,7 +215,7 @@ level-gui:
         - "&fRewards:"
         - "%rewards%"
 
-  custom-slots: [ ] # Extra GUI slots; see https://plugins.auxilor.io/all-plugins/custom-gui-slots
+  custom-slots: [ ] # Extra GUI slots; see https://hub.auxilor.io/wiki/eco/pages
 
 persistent-action-bar: # A constant action bar showing health and stats to online players
   enabled: true # Whether the persistent action bar is shown
@@ -330,5 +330,5 @@ skills:
 ## Where to go next
 
 - **Make a skill:** [How to make a Skill](how-to-make-a-skill) for the per-skill config files this GUI displays.
-- **Custom GUI slots:** add your own buttons with [Custom GUI Slots](https://plugins.auxilor.io/all-plugins/custom-gui-slots).
+- **Custom GUI slots:** add your own buttons with [Custom GUI Slots](https://hub.auxilor.io/wiki/eco/pages).
 - **Commands:** the reload and admin commands live in [Commands and Permissions](commands-and-permissions).

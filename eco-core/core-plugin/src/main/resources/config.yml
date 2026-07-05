@@ -103,7 +103,7 @@ gui:
       row: 6
       column: 5
 
-  # Custom GUI slots; see here for a how-to: https://plugins.auxilor.io/all-plugins/custom-gui-slots
+  # Custom GUI slots; see here for a how-to: https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
   custom-slots: [ ]
 
 
@@ -158,7 +158,7 @@ stats-gui:
       row: 6
       column: 5
 
-  # Custom GUI slots; see here for a how-to: https://plugins.auxilor.io/all-plugins/custom-gui-slots
+  # Custom GUI slots; see here for a how-to: https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
   custom-slots: [ ]
 
 
@@ -258,7 +258,7 @@ level-gui:
         - "&fRewards:"
         - "%rewards%"
 
-  # Custom GUI slots; see here for a how-to: https://plugins.auxilor.io/all-plugins/custom-gui-slots
+  # Custom GUI slots; see here for a how-to: https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
   custom-slots: [ ]
 
 
