@@ -1,6 +1,6 @@
 package com.willfp.ecoskills.skills
 
-import com.github.benmanes.caffeine.cache.Caffeine
+import com.willfp.eco.core.cache.EcoCache
 import com.willfp.eco.core.config.interfaces.Config
 import com.willfp.eco.core.placeholder.PlayerPlaceholder
 import com.willfp.ecoskills.api.totalSkillLevel
@@ -16,9 +16,9 @@ import java.util.UUID
 
 object Skills : RegistrableCategory<Skill>("skill", "skills") {
     // Totally not copied over from Levellable
-    private val leaderboardCache = Caffeine.newBuilder()
+    private val leaderboardCache = EcoCache.builder<Boolean, List<UUID>>()
         .expireAfterWrite(Duration.ofSeconds(plugin.configYml.getInt("leaderboard.cache-lifetime").toLong()))
-        .build<Boolean, List<UUID>> {
+        .build {
             if (!plugin.configYml.getBool("leaderboard.enabled"))
                 return@build emptyList()
             Bukkit.getOfflinePlayers().sortedByDescending {
@@ -29,7 +29,7 @@ object Skills : RegistrableCategory<Skill>("skill", "skills") {
     fun getTop(position: Int): LeaderboardEntry? {
         require(position > 0) { "Position must be greater than 0" }
 
-        val uuid = leaderboardCache.get(true).getOrNull(position - 1) ?: return null
+        val uuid = leaderboardCache.get(true)?.getOrNull(position - 1) ?: return null
 
         val player = Bukkit.getOfflinePlayer(uuid).takeIf { it.hasPlayedBefore() } ?: return null
 
@@ -41,7 +41,7 @@ object Skills : RegistrableCategory<Skill>("skill", "skills") {
 
     fun getPosition(uuid: UUID): Int? {
         val leaderboard = leaderboardCache.get(true)
-        val index = leaderboard.indexOf(uuid)
+        val index = leaderboard?.indexOf(uuid) ?: -1
         return if (index == -1) null else index + 1
     }
 

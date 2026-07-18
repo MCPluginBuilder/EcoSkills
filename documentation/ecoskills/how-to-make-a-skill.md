@@ -20,7 +20,7 @@ A **skill** is something players level up by doing a task, like mining or fishin
 
 ## Naming and IDs
 
-The file name without `.yml` is the skill's ID. That ID is what you use in commands, rewards, and placeholders. For item textures and icons, see the [Item Lookup System](https://hub.auxilor.io/wiki/eco/the-item-lookup-system-the-item-lookup-system).
+The file name without `.yml` is the skill's ID. That ID is what you use in commands, rewards, and placeholders. For item textures and icons, see the [Item Lookup System](https://plugins.auxilor.io/the-item-lookup-system).
 
 :::warning ID rules
 IDs may only contain lowercase letters, numbers, and underscores (a-z, 0-9, _). No spaces, capitals, or hyphens, or the skill will not load.
@@ -127,7 +127,7 @@ xp-requirements: # Option 1: explicit XP to reach each level
 ```
 
 ```yaml
-xp-formula: (2 ^ %level%) * 25 # Option 2: XP per level from a formula; see https://hub.auxilor.io/wiki/eco/math
+xp-formula: (2 ^ %level%) * 25 # Option 2: XP per level from a formula; see https://plugins.auxilor.io/all-plugins/math
 max-level: 100 # Optional; with a formula there is no max level unless you set one
 ```
 
@@ -174,8 +174,8 @@ level-up-effects:
 :::danger Effects are their own system
 The effects, conditions, filters, and mutators here are the shared libreforge system, documented in full elsewhere. Read these before going deep:
 
-- [Configuring an Effect](https://hub.auxilor.io/wiki/libreforge/configuring-an-effect)
-- [Configuring an Effect Chain](https://hub.auxilor.io/wiki/libreforge/configuring-a-chain)
+- [Configuring an Effect](https://plugins.auxilor.io/effects/configuring-an-effect)
+- [Configuring an Effect Chain](https://plugins.auxilor.io/effects/configuring-a-chain)
 :::
 
 ### Messages
@@ -222,4 +222,4 @@ conditions: [ ] # Empty means no restriction
 
 - **Default skills:** the shipped skill configs are [on GitHub](https://github.com/Auxilor/EcoSkills/tree/master/eco-core/core-plugin/src/main/resources/skills); community configs are on [lrcdb](https://lrcdb.auxilor.io/).
 - **Grant stats and effects:** define what your rewards point to in [How to make a Stat](how-to-make-a-stat) and [How to make an Effect](how-to-make-an-effect).
-- **Configure effects:** the effects system is covered in [Configuring an Effect](https://hub.auxilor.io/wiki/libreforge/configuring-an-effect).
+- **Configure effects:** the effects system is covered in [Configuring an Effect](https://plugins.auxilor.io/effects/configuring-an-effect).

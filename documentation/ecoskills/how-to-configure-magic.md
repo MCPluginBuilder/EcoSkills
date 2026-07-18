@@ -20,7 +20,7 @@ A **magic type** is an optional, naturally regenerating resource like **Mana** t
 
 ## Naming and IDs
 
-The file name without `.yml` is the magic type's ID. That ID is what you use in commands, placeholders, and prices. For item textures and icons, see the [Item Lookup System](https://hub.auxilor.io/wiki/eco/the-item-lookup-system-the-item-lookup-system).
+The file name without `.yml` is the magic type's ID. That ID is what you use in commands, placeholders, and prices. For item textures and icons, see the [Item Lookup System](https://plugins.auxilor.io/the-item-lookup-system).
 
 :::warning ID rules
 IDs may only contain lowercase letters, numbers, and underscores (a-z, 0-9, _). No spaces, capitals, or hyphens, or the magic type will not load.
@@ -72,7 +72,7 @@ join-on-full: true # true: join full; false: join empty
 ```
 
 :::info Spending magic in effects
-You don't spend magic in this file; you spend it in effect configs through the shared [Prices](https://hub.auxilor.io/wiki/eco/the-price-lookup-system) system. Add a `<id>_cost` arg for a quick deduction, e.g. `mana_cost: 10`, or a full `price` block typed to your magic ID for custom display and currencies.
+You don't spend magic in this file; you spend it in effect configs through the shared [Prices](https://plugins.auxilor.io/all-plugins/prices) system. Add a `<id>_cost` arg for a quick deduction, e.g. `mana_cost: 10`, or a full `price` block typed to your magic ID for custom display and currencies.
 :::
 
 ## Internal placeholders
@@ -93,5 +93,5 @@ You don't spend magic in this file; you spend it in effect configs through the s
 ## Where to go next
 
 - **Default magic types:** the shipped configs are [on GitHub](https://github.com/Auxilor/EcoSkills/tree/master/eco-core/core-plugin/src/main/resources/magic_types).
-- **Spend magic:** wire costs into abilities with the [Prices](https://hub.auxilor.io/wiki/eco/the-price-lookup-system) system.
+- **Spend magic:** wire costs into abilities with the [Prices](https://plugins.auxilor.io/all-plugins/prices) system.
 - **Make an effect:** build the abilities that consume magic in [How to make an Effect](how-to-make-an-effect).

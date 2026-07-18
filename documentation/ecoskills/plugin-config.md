@@ -90,7 +90,7 @@ gui:
       row: 6
       column: 5
 
-  custom-slots: [ ] # Extra GUI slots; see https://hub.auxilor.io/wiki/eco/pages
+  custom-slots: [ ] # Extra GUI slots; see https://plugins.auxilor.io/all-plugins/custom-gui-slots
 
 stats-gui:
   rows: 6 # Rows in the /stats GUI
@@ -133,17 +133,11 @@ stats-gui:
       row: 6
       column: 5
 
-  custom-slots: [ ] # Extra GUI slots; see https://hub.auxilor.io/wiki/eco/pages
+  custom-slots: [ ] # Extra GUI slots; see https://plugins.auxilor.io/all-plugins/custom-gui-slots
 
 level-gui:
-  title: "&7%skill% &8(%page%/%max_page%)" # GUI title; %skill% is the skill being viewed. Supports %page% and %max_page% placeholders
+  title: "&7%skill%" # GUI title; %skill% is the skill being viewed
   rows: 6
-
-  page-change-sound:
-    enabled: true
-    sound: ui.button.click
-    pitch: 1.0
-    volume: 1.0
 
   mask:
     materials:
@@ -167,14 +161,15 @@ level-gui:
     item-amount: "%level%" # Item stack size as a function of level; always rounded down, e.g. "ceil((%level% + 1) / 10)" to step every 10 levels
 
     prev-page:
-      item: arrow name:"&fPrevious Page"
+      material: arrow
+      name: "&fPrevious Page"
       location:
         row: 6
         column: 4
 
     next-page:
-      item: arrow name:"&fNext Page"
-      item-inactive: gray_dye name:"&7Next Page"
+      material: arrow
+      name: "&fNext Page"
       location:
         row: 6
         column: 6
@@ -215,7 +210,7 @@ level-gui:
         - "&fRewards:"
         - "%rewards%"
 
-  custom-slots: [ ] # Extra GUI slots; see https://hub.auxilor.io/wiki/eco/pages
+  custom-slots: [ ] # Extra GUI slots; see https://plugins.auxilor.io/all-plugins/custom-gui-slots
 
 persistent-action-bar: # A constant action bar showing health and stats to online players
   enabled: true # Whether the persistent action bar is shown
@@ -330,5 +325,5 @@ skills:
 ## Where to go next
 
 - **Make a skill:** [How to make a Skill](how-to-make-a-skill) for the per-skill config files this GUI displays.
-- **Custom GUI slots:** add your own buttons with [Custom GUI Slots](https://hub.auxilor.io/wiki/eco/pages).
+- **Custom GUI slots:** add your own buttons with [Custom GUI Slots](https://plugins.auxilor.io/all-plugins/custom-gui-slots).
 - **Commands:** the reload and admin commands live in [Commands and Permissions](commands-and-permissions).
